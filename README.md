@@ -1,3 +1,20 @@
+> 中文文档：[README_zh-CN.md](README_zh-CN.md)
+
+# Grok Build Desktop
+
+Grok Build Desktop is a desktop application for programming-task agents,
+ported from and built on top of [Grok Build](https://github.com/xai-org/grok-build).
+It packages the Grok Build agent runtime in a Tauri desktop application so you
+can use an AI coding agent through a native graphical interface.
+
+The desktop app lives in [`apps/desktop`](apps/desktop/). The upstream Grok
+Build CLI/TUI source and runtime remain in this repository and are synced
+periodically.
+
+---
+
+## Upstream Grok Build
+
 <div align="center">
 
 <h1>
