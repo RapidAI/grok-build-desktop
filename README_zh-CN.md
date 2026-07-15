@@ -10,6 +10,9 @@ AI 编程助手能力。
 桌面应用代码位于 [`apps/desktop`](apps/desktop/)；本仓库同时保留 Grok
 Build 上游的 CLI/TUI 源码与运行时，并会定期同步。
 
+> **开发状态：**本程序目前由 Grok Build CLI 版本开发；后续将改为由
+> Grok Build Desktop 自举开发。
+
 ## 桌面应用架构
 
 - `apps/desktop/src/`：React 桌面界面

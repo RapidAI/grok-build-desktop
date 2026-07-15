@@ -11,6 +11,10 @@ The desktop app lives in [`apps/desktop`](apps/desktop/). The upstream Grok
 Build CLI/TUI source and runtime remain in this repository and are synced
 periodically.
 
+> **Development status:** This application is currently developed with the
+> Grok Build CLI. The long-term goal is for Grok Build Desktop to bootstrap and
+> develop itself.
+
 ---
 
 ## Upstream Grok Build
