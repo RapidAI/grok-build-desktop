@@ -1,0 +1,66 @@
+[package]
+name = "grok-desktop"
+version = "0.1.0"
+description = "Grok Desktop — integrated Tauri host + ACP stdio agent"
+authors = ["Grok Desktop"]
+edition = "2021"
+default-run = "grok-desktop"
+
+# Standalone package (not a member of the monorepo workspace).
+[workspace]
+
+[lib]
+name = "grok_desktop_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[[bin]]
+name = "grok-desktop"
+path = "src/main.rs"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-shell = "2"
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = [
+    "rt-multi-thread",
+    "macros",
+    "process",
+    "io-util",
+    "sync",
+    "time",
+    "fs",
+] }
+thiserror = "2"
+uuid = { version = "1", features = ["v4"] }
+dirs = "5"
+toml = "0.8"
+toml_edit = "0.22"
+keyring = "3"
+dunce = "1"
+parking_lot = "0.12"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[dev-dependencies]
+tempfile = "3"
+tokio = { version = "1", features = [
+    "rt-multi-thread",
+    "macros",
+    "process",
+    "io-util",
+    "sync",
+    "time",
+    "fs",
+    "net",
+] }
+axum = "0.8"
+futures-util = "0.3"
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
